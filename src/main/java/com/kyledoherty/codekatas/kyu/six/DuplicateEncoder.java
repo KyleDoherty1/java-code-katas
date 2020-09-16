@@ -1,5 +1,6 @@
 package com.kyledoherty.codekatas.kyu.six;
 
+//https://www.codewars.com/kata/54b42f9314d9229fd6000d9c
 public class DuplicateEncoder {
     static String encode(String word){
         word = word.toLowerCase();
