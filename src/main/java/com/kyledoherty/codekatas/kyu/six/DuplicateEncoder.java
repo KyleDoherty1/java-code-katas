@@ -4,12 +4,12 @@ package com.kyledoherty.codekatas.kyu.six;
 public class DuplicateEncoder {
     static String encode(String word){
         word = word.toLowerCase();
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < word.length(); ++i) {
             char c = word.charAt(i);
-            result += word.lastIndexOf(c) == word.indexOf(c) ? "(" : ")";
+            result.append(word.lastIndexOf(c) == word.indexOf(c) ? "(" : ")");
         }
-        return result;
+        return result.toString();
     }
     /*static String encode(String word){
         word = word.toLowerCase();
