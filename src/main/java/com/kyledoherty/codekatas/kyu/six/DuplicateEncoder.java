@@ -1,0 +1,37 @@
+package com.kyledoherty.codekatas.kyu.six;
+
+public class DuplicateEncoder {
+    static String encode(String word){
+        word = word.toLowerCase();
+        String result = "";
+        for (int i = 0; i < word.length(); ++i) {
+            char c = word.charAt(i);
+            result += word.lastIndexOf(c) == word.indexOf(c) ? "(" : ")";
+        }
+        return result;
+    }
+    /*static String encode(String word){
+        word = word.toLowerCase();
+
+        StringBuilder answer = new StringBuilder();
+        Hashtable<Character, Integer> charsInWord = new Hashtable<Character, Integer>();
+
+        for(char c: word.toCharArray()){
+            Integer count = charsInWord.get(c);
+            if(count == null)
+                charsInWord.put(c,1);
+            else
+                charsInWord.put(c, ++count);
+        }
+
+        for(char c: word.toCharArray()){
+            if(charsInWord.get(c).intValue() > 1)
+                answer.append(")");
+            else
+                answer.append("(");
+        }
+
+        return answer.toString();
+    }*/
+}
+
